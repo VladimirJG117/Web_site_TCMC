@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <meta name="description" content="Página web">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="header__nav">
+            <a href="Index.html"><img src="imgs/logo.png" alt="Logo" class="header__logo"></a>
+            <ul class="header__menu">
+                <li class="header__item"><a href="about.html" class="header__link">ABOUT US</a></li>
+                <li class="header__item"><a href="gallery.html" class="header__link">GALLERY</a></li>
+                <li class="header__item"><a href="contact.html" class="header__link"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+            <!-- Icono de menú hamburguesa -->
+            <div class="header__menu-icon" onclick="toggleMenu()">
+                <span class="header__menu-icon-bar"></span>
+                <span class="header__menu-icon-bar"></span>
+                <span class="header__menu-icon-bar"></span>
+            </div>
+            <!-- Menú de navegación -->
+            <ul class="header__menu" id="menu">
+                <li class="header__menu-item"><a href="Index.html">Inicio</a></li>
+                <li class="header__menu-item"><a href="about.html">About</a></li>
+                <li class="header__menu-item"><a href="gallery.html">Gallery</a></li>
+                <li class="header__menu-item"><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- Carousel -->
+    
+   <div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-slide active">
+            <img src="https://picsum.photos/800/400?image=10" alt="Imagen 1">
+            <div class="carousel-text">
+                <h2>Mauris blandit aliquet elit, sfbjbjsba jkfgfi vvfd</h2>
+                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit.</p>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://picsum.photos/800/400?image=20" alt="Imagen 2">
+            <div class="carousel-text">
+                <h2>Otro título aquí</h2>
+                <p>Descripción para la segunda imagen.</p>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://picsum.photos/800/400?image=30" alt="Imagen 3">
+            <div class="carousel-text">
+                <h2>Un tercer título aquí</h2>
+                <p>Otra descripción para la tercera imagen.</p>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://picsum.photos/800/400?image=40" alt="Imagen 2">
+            <div class="carousel-text">
+                <h2>Otro título aquí</h2>
+                <p>Descripción para la segunda imagen.</p>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="https://picsum.photos/800/400?image=50" alt="Imagen 3">
+            <div class="carousel-text">
+                <h2>Un tercer título aquí</h2>
+                <p>Otra descripción para la tercera imagen.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Indicadores de desplazamiento -->
+    <div class="carousel-indicators">
+        <div class="indicator active" onclick="moveSlide(0)"></div>
+        <div class="indicator" onclick="moveSlide(1)"></div>
+        <div class="indicator" onclick="moveSlide(2)"></div>
+        <div class="indicator" onclick="moveSlide(3)"></div>
+        <div class="indicator" onclick="moveSlide(4)"></div>
+    </div>
+</div>
+<script>    
+    
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+
+    function moveSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        indicators[currentSlide].classList.remove('active');
+
+        currentSlide = index;
+
+        slides[currentSlide].classList.add('active');
+        indicators[currentSlide].classList.add('active');}
+        
+</script>
+
+    <!-- Sección de iconos -->
+    <div class="section__txt">
+        <h1 class="section__title">Cras ultricies ligula sed magna dictum porta.</h1>
+        <p class="section__description">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui</p>
+    </div>
+    <section class="icons">
+        <a href="about.html" class="icons__item">
+            <i class="fas fa-user"></i>
+            <span class="label">About us</span>
+        </a>
+        <a href="gallery.html" class="icons__item">
+            <i class="fas fa-image"></i>
+            <span class="label">Gallery</span>
+        </a>
+        <a href="contact.html" class="icons__item icons__item--envelope">
+            <i class="fa-solid fa-comments"></i>
+            <span class="label">Chat</span>
+        </a>
+    </section>
+
+
+
+
+    <!-- Sección Imagen + Texto -->
+    <div class="container">
+
+
+        <div class="content content--primary">
+
+
+            <div class="content__image content__image--primary">
+                <p>square image 1</p>
+            </div>
+
+            <div class="content__text content__text--right">
+                <h2 class="content__title">Cras ultricies ligula sed magna dictum porta.</h2>
+                <p class="content__description">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada.</p>
+                <button class="content__button" onclick="window.location.href='https://www.ejemplo.com';">Cras ultricies ligula</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="content content--secondary">
+
+
+            <div class="content__text content__text--left">
+
+                <h2 class="content__title">Donec sollicitudin molestie malesuada.</h2>
+                <p class="content__description">Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Proin eget tortor risus.</p>
+                <button class="content__button" onclick="window.location.href='https://www.ejemplo.com';">Cras ultricies ligula</button>
+
+            </div>
+
+            <div class="content__image content__image--secondary">
+                <p>square image 2</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="section__txt">
+        <h1 class="section__title">Crfks huj dmkid alpcien adsuhs nfasd vaom shfnjsdbhjgjkahjkah askfhau.</h1>
+        <p class="section__description"> Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. 
+            Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. 
+            Donec rutrum congue leo eget malesuada.</p>
+    </div>
+
+
+
+
+    <!-- Mapa -->
+    <section class="contact-card">
+        <p class="espacio__blanco">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <div class="contact-card__map">
+            <iframe src="https://maps.google.com/maps?q=Félix+Cuevas+449,+Tlacoquemecatl+del+Valle,+03200+CDMX&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+        </div>
+        <div class="contact-card__info">
+            <div class="contact-card__logo">
+                <a href="Index.html"><img src="imgs/logo_sin.png" alt="Logo" class="header__logo"></a>
+            </div>
+            <div class="contact-card__details">
+                <p class="contact-card__email">
+                    <i class="fa-solid fa-envelope"></i>tucasamicasa@indava.com
+                </p>
+                <p class="contact-card__phone">
+                    <i class="fas fa-user"></i> +52 55 4169 5958
+                </p>
+                <p class="contact-card__address">
+                    <i class="fa-solid fa-location-dot"></i> Moras 449, Tlacoquemecatl del Valle, 03200, CDMX
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+        <p class="footer__txt">Vestibulum ac diam ericfhd jolusim dsfsduyr nlbvwppksoijijb.</p>
+        <div class="chat-window">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+    </section>
+    
+</body>
+</html>

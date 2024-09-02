@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <meta name="description" content="Página web">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="header__nav">
+            <a href="Index.html"><img src="imgs/logo.png" alt="Logo" class="header__logo"></a>
+            <ul class="header__menu">
+                <li class="header__item"><a href="about.html" class="header__link">ABOUT US</a></li>
+                <li class="header__item"><a href="gallery.html" class="header__link">GALLERY</a></li>
+                <li class="header__item"><a href="contact.html" class="header__link"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+            <!-- Icono de menú hamburguesa -->
+            <div class="header__menu-icon" onclick="toggleMenu()">
+                <span class="header__menu-icon-bar"></span>
+                <span class="header__menu-icon-bar"></span>
+                <span class="header__menu-icon-bar"></span>
+            </div>
+            <!-- Menú de navegación -->
+            <ul class="header__menu" id="menu">
+                <li class="header__menu-item"><a href="Index.html">Inicio</a></li>
+                <li class="header__menu-item"><a href="about.html">About</a></li>
+                <li class="header__menu-item"><a href="gallery.html">Gallery</a></li>
+                <li class="header__menu-item"><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact__hero__banner">
+        <h2 class="tittle__hero__banner">About Us</h2>
+    </section>
+
+    <div class="section__txt">
+        <h1 class="section__title">Cras ultricies ligula sed magna dictum porta.</h1>
+        <p class="section__description">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.Vestibulum ac diam sit amet quam vehicula elementum sed sit amet duiVestibulum ac diam sit amet quam vehicula elementum sed sit amet duiVestibulum ac diam sit amet quam vehicula elementum sed sit amet duiVestibulum ac diam sit amet quam vehicula elementum sed sit amet dui</p>
+    </div>
+
+        <div class="about">
+        <div class="about__item">
+            <div class="about__image">
+                <img src="https://via.placeholder.com/150" alt="User Image">
+            </div>
+            <div class="about__text">
+                <h3 class="about__title">Cras ultricies ligula.</h3>
+                <p class="about__description">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+            </div>
+        </div>
+
+        <div class="about__item">
+            <div class="about__image">
+                <img src="https://via.placeholder.com/150" alt="User Image">
+            </div>
+            <div class="about__text">
+                <h3 class="about__title">Sagittis pretium.</h3>
+                <p class="about__description">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+            </div>
+        </div>
+
+        <div class="about__item">
+            <div class="about__image">
+                <img src="https://via.placeholder.com/150" alt="User Image">
+            </div>
+            <div class="about__text">
+                <h3 class="about__title">Sed porttitor lectus.</h3>
+                <p class="about__description">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+            </div>
+        </div>
+
+        <div class="about__item">
+            <div class="about__image">
+                <img src="https://via.placeholder.com/150" alt="User Image">
+            </div>
+            <div class="about__text">
+                <h3 class="about__title">Pellentesque vulputate.</h3>
+                <p class="about__description">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+            </div>
+        </div>
+
+        <div class="about__item">
+            <div class="about__image">
+                <img src="https://via.placeholder.com/150" alt="User Image">
+            </div>
+            <div class="about__text">
+                <h3 class="about__title">Cras ultricies ligula.</h3>
+                <p class="about__description">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mapa -->
+    <section class="contact-card">
+        <p class="espacio__blanco">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <div class="contact-card__map">
+            <iframe src="https://maps.google.com/maps?q=Félix+Cuevas+449,+Tlacoquemecatl+del+Valle,+03200+CDMX&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+        </div>
+        <div class="contact-card__info">
+            <div class="contact-card__logo">
+                <a href="Index.html"><img src="imgs/logo_sin.png" alt="Logo" class="header__logo"></a>
+            </div>
+            <div class="contact-card__details">
+                <p class="contact-card__email">
+                    <i class="fa-solid fa-envelope"></i>tucasamicasa@indava.com
+                </p>
+                <p class="contact-card__phone">
+                    <i class="fas fa-user"></i> +52 55 4169 5958
+                </p>
+                <p class="contact-card__address">
+                    <i class="fa-solid fa-location-dot"></i> Moras 449, Tlacoquemecatl del Valle, 03200, CDMX
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+        <p class="footer__txt">Vestibulum ac diam ericfhd jolusim dsfsduyr nlbvwppksoijijb.</p>
+        <div class="chat-window">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+    </section>
+    
+</body>
+</html>
