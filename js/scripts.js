@@ -3,32 +3,42 @@ function toggleMenu() {
     menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
 }
 
-document.getElementById('customForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var email = document.getElementById('email').value;
+const customForm = document.getElementById('customForm');
+if (customForm) {
+    customForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var email = document.getElementById('email').value;
 
-    if (!validateEmail(email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
 
-    // Show popup
-    document.getElementById('popup').style.display = 'flex';
-});
+        // Mostrar popup
+        document.getElementById('popup').style.display = 'flex';
+    });
+}
 
-document.getElementById('closePopup').addEventListener('click', function() {
-    // Clear the form
-    document.getElementById('customForm').reset();
+// Verificar si existe el botón de cierre del popup antes de agregar el event listener
+const closePopupButton = document.getElementById('closePopup');
+if (closePopupButton) {
+    closePopupButton.addEventListener('click', function() {
+        // Limpiar el formulario
+        if (customForm) {
+            customForm.reset();
+        }
 
-    // Hide the popup
-    document.getElementById('popup').style.display = 'none';
+        // Ocultar el popup
+        document.getElementById('popup').style.display = 'none';
 
-    // Redirect to homepage after 2 seconds
-    setTimeout(function() {
-        window.location.href = 'index.html';
-    }, 2000);
-});
+        // Redirigir a la página de inicio después de 2 segundos
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 2000);
+    });
+}
 
+// Validar el email
 function validateEmail(email) {
     var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Sitio Web</title>
     <meta name="description" content="Página web">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+    <link rel="manifest" href="imgs/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -42,7 +46,7 @@
 
     <!-- formulario -->
 
-    <div class="form-container">
+    <section class="form-container">
         <form class="form" id="customForm">
             <div class="form__group">
                 <input type="text" id="name" class="form__input" required>
@@ -54,23 +58,21 @@
             </div>
             <div class="form__group">
                 <textarea id="message" class="form__textarea" required></textarea>
-                <label for="message" class="form__label"><t class="form__label__M">Message</t></label>
+                <label for="message" class="form__label"><t class="form__label__Message">Message</t></label>
             </div>
             <div class="form__group">
                 <button type="submit" class="form__button">Cras ultricies ligula</button>
             </div>
         </form>
-    </div>
+    </section>
 
-    <div class="popup" id="popup">
+    <section class="popup" id="popup">
         <div class="popup__content">
             <p class="popup__thanks">THANKS!</p>
-            <p>Your message has been sent!</p>
+            <p class="popup__thanks__description">Your message has been sent!</p>
             <button class="popup__button" id="closePopup">OK</button>
         </div>
-    </div>
-
-    <script src="js/scripts.js"></script>
+    </section>
   
 
     <!-- Mapa -->
@@ -99,7 +101,7 @@
 
     <!--footer-->
     <section class="footer">
-        <p class="footer__txt">Vestibulum ac diam ericfhd jolusim dsfsduyr nlbvwppksoijijb.</p>
+        <p class="footer__legal">Vestibulum ac diam ericfhd jolusim dsfsduyr nlbvwppksoijijb.</p>
         <div class="chat-window">
             <i class="fas fa-comment-dots"></i>
         </div>
