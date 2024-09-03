@@ -73,6 +73,41 @@
             <button class="popup__button" id="closePopup">OK</button>
         </div>
     </section>
+
+    <script>
+        document.getElementById('customForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+        
+            var email = document.getElementById('email').value;
+            if (!validateEmail(email)) {
+                alert('Por favor, introduce una dirección de correo electrónico válida.');
+                return;
+            }
+        
+            // Mostrar el popup
+            document.getElementById('popup').style.display = 'flex';
+        });
+        
+        document.getElementById('closePopup').addEventListener('click', function() {
+            // Limpiar los campos del formulario
+            document.getElementById('customForm').reset();
+        
+            // Cerrar el popup
+            document.getElementById('popup').style.display = 'none';
+        
+            // Redireccionar al homepage después de 2 segundos
+            setTimeout(function() {
+                window.location.href = 'index.html'; // Reemplaza 'index.html' con la URL de tu homepage
+            }, 2000);
+        });
+        
+        // Función para validar la dirección de correo electrónico
+        function validateEmail(email) {
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+    </script>
   
 
     <!-- Mapa -->

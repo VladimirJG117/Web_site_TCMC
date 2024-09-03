@@ -271,7 +271,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .content {
@@ -284,7 +284,6 @@ body {
 .content__image {
      background-image: url('https://picsum.photos/800/400?image=60');
     background-color: #e0e0e0;
-    width: 100%;
     padding-top: 100%; /* Mantiene la proporción 1:1 */
     position: relative;
 }
@@ -302,6 +301,7 @@ body {
 .content__text {
     text-align: center;
     line-height: 1.2;
+    margin-left: 40px;
 }
 
 .content__title {
@@ -338,7 +338,7 @@ body {
     width: 100%;
     height: 100%; /* Ajuste adecuado para pantallas pequeñas */
     border: none;
-    margin-left: 20px;
+    padding-left: 25px;
 }
 
 
@@ -422,7 +422,7 @@ body {
     background-position: center; /* Centra la imagen en el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     width: 100%;
-    height: 150px;
+    height: 200px;
     font-family: var(--font-body);
     color: #ffffff;
 }
@@ -431,7 +431,7 @@ body {
 .tittle__hero__banner{
     font-family: var(--font-title);
     text-align: center;
-    line-height: 9rem;
+    line-height: 12.5rem;
     font-size: 2.25rem;
 }
 
@@ -447,6 +447,7 @@ body {
     align-items: center;
     height: auto;
     background-color: #fff;
+    margin-top: 40px;
             
 }
 
@@ -758,6 +759,16 @@ body {
 }
 
 @media (max-width: 1279px) and (min-width: 768px) {
+
+    .footer__legal {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        margin-left: 2.5rem;
+    }
+    .contact-card__map iframe{
+        padding-left: 0px;
+    }
+
     
     /*gallery*/
     .gallery {
@@ -876,8 +887,11 @@ body {
         margin-top: 20px;
     }
 
+  
+
 
     /*mapa*/
+    
 
     .contact-card {
         flex-direction: row;
@@ -1066,7 +1080,7 @@ body {
         max-width: 50%;
     }
     .carousel__title {
-        font-size: 3rem;
+        font-size: 2.25rem;
     }
 
     .image-text {
@@ -1153,15 +1167,38 @@ body {
     .gallery__container{
         height: 140px;
     }
+    .footer__legal {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        margin-left: 4.5rem;
+    }
+
 }
 
 
 
 @media screen and (max-width: 576px) {
+ 
+    .carousel-slide img{
+        height: 500px;
+    }
+    .carousel-container{
+        height: 500px;
+    }
+    .carousel-text{
+        top: 60%;
+    }
+    .carousel-indicators{
+    top: 90%;
+    }
+    .container{
+        gap: 50px;
+    }
 
-    .icons__item--envelope {
+    .icons__item.icons__item--envelope {
         display: none;
     }
+    
     
     .icons__item .label {
         display: block;
@@ -1176,6 +1213,15 @@ body {
         flex-direction: column;
     }
 
+    .content__text{
+        text-align: left;
+        line-height: 1.2;
+        margin-left: -20px;
+    }
+
+
+ 
+
     .content--secondary .content__text {
         order: 2; /* Cambia el orden del texto en la segunda fila */
     }
@@ -1185,8 +1231,9 @@ body {
         margin-top: 20px;
     }
     .content__button {
-        text-align: center;
-        margin-top: 20px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
     }
     
     /*mapa*/
@@ -1210,6 +1257,7 @@ body {
     .contact-card__map iframe {
 
         margin-left: 0px;
+        padding-left: 0%;
         height: 300px;
     }
     
@@ -1252,6 +1300,12 @@ body {
         display: flex;
         margin-right: 30px;
     }
+    .footer__legal {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        margin-left: 1.5rem;
+    }
+
           
 }
 
@@ -1291,6 +1345,7 @@ body {
 @media (min-width: 577px) {
     .container {
         gap: 0px;
+        padding: 2%;
     }
 
     .content {
@@ -1300,18 +1355,22 @@ body {
 
     .content__image {
         max-width: 480px;
-        width: 63%;
-        height: 80%;
+        max-height: 480px;
+        width: 100%;
+        height: 100%;
         padding-top: 40%; /* Mantiene la proporción 1:1 */
     }
 
     .content__text {
         text-align: left;
-        width: 60%;
+        width: 96%;
+        margin-left: 0;
+        margin-bottom: 40px;
     }
 
     .content--secondary .content__text {
         order: 1; /* Cambia el orden del texto en la segunda fila */
+
     }
 
     .content--secondary .content__image {

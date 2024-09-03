@@ -3,26 +3,12 @@ function toggleMenu() {
     menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
 }
 
-const customForm = document.getElementById('customForm');
-if (customForm) {
-    customForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        var email = document.getElementById('email').value;
 
-        if (!validateEmail(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-
-        // Mostrar popup
-        document.getElementById('popup').style.display = 'flex';
-    });
-}
-
+/*
 // Verificar si existe el botón de cierre del popup antes de agregar el event listener
 const closePopupButton = document.getElementById('closePopup');
 if (closePopupButton) {
-    closePopupButton.addEventListener('click', function() {
+    closePopupButton.addEventListener('submit', function() {
         // Limpiar el formulario
         if (customForm) {
             customForm.reset();
@@ -43,3 +29,5 @@ function validateEmail(email) {
     var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
+    */
+
