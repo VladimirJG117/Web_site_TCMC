@@ -1274,8 +1274,10 @@ body {
     .gallery__container{
         height: 0px;
     }
+
     .gallery{
-        margin-top: 0;
+        margin-top: -160px;
+        margin-bottom: -40%;
     }
     /*formularion*/
 
@@ -1337,6 +1339,9 @@ body {
             }
             .about__text{
                 padding-right: 10px;
+            }
+            .gallery{
+                margin-top: 30%;
             }
 }
 
