@@ -758,7 +758,7 @@ body {
     margin: 0;
 }
 
-@media (max-width: 1279px) and (min-width: 768px) {
+@media (max-width: 1279px) and (min-width: 577px) {
 
     .footer__legal {
         font-family: var(--font-body);
@@ -771,6 +771,12 @@ body {
 
     
     /*gallery*/
+
+    .container__general__gallery{
+        width: 100;
+        padding: 0;
+        margin: 0;
+    }
     .gallery {
         display: grid;
         grid-template-columns: 1fr; /* Una sola columna, ocupando todo el ancho */
@@ -787,7 +793,7 @@ body {
        
         width: 50%;
         max-width: 480px;
-        height: auto;
+        height: 100%;
         display: block;
     }
     .gallery{
@@ -795,8 +801,9 @@ body {
         padding-left: 10px;
     }
     .gallery-item{
-        max-width: 768px;
+        max-width: 1279px;
         width: 100%;
+        
     }
     .gallery-item h3 {
         font-family: var(--font-title);
@@ -814,6 +821,8 @@ body {
         margin-bottom: 100px;
         color: #000000;
         padding-left: 20px;
+        flex-wrap: wrap;
+        display: block;
     }
 
     .gallery-item:nth-child(1) p,
@@ -850,6 +859,16 @@ body {
     .chat-window__gallery {
         display: none;
     }
+
+}
+
+@media (max-width:750px) and (min-width: 577px) {
+
+    .gallery-item p {
+        display: block;
+        width: 40%;
+    }
+    
 }
 
 
@@ -914,7 +933,7 @@ body {
 
     /*gallery*/
     .gallery__container{
-        height: 5pxpx;
+        height: 5px;
     }
     
 
@@ -965,6 +984,9 @@ body {
     /*chat*/
     .chat-window__gallery {
         display: none;
+    }
+    .gallery{
+        margin-top: 0%;
     }
 
 }
@@ -1036,10 +1058,13 @@ body {
         align-items: left; /* Esto alinea verticalmente los elementos */
         justify-content: left; /* Esto centra los elementos horizontalmente */
     }
+    .about__text{
+        width: 100%;
+    }
 
     .about__item {
         flex-direction: row;
-        width: calc(50% - 10px);
+        width: 100%;
     }
 
     .about__image {
@@ -1055,7 +1080,7 @@ body {
         font-family: var(--font-title);
         font-size: 1.5rem;
         margin-bottom: 0px;
-        width: 25vh;
+        width: 100%;
     }
     .section__description{
         text-align: justify;
@@ -1064,11 +1089,6 @@ body {
     .gallery__container{
         height: 90px;
     }
-
-
-
-
-
 }
 
 @media (min-width: 1280px) {
@@ -1139,40 +1159,85 @@ body {
         padding: 60px;
     }
     /*about us*/
-    .about {
+/*about us*/
+
+.section__content .section__title{
+    text-align: left;
+}
+.about {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 62%;
+    margin: auto;
+    margin-top: 30px;
+    align-items: left; /* Esto alinea verticalmente los elementos */
+    justify-content: left; /* Esto centra los elementos horizontalmente */
+}
+
+.about__item {
+    flex-direction: row;
+    width: 100%;
+}
+
+.about__image {
+    width: 200px;
+    height: 200px;
+}
+
+.about__title{
+    margin-top: 8%;
+}
+/*galery*/
+.gallery__container{
+    height: 140px;
+}
+.footer__legal {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-left: 4.5rem;
+    }
+}
+
+@media (max-width: 1279px) and (min-width: 769px){
+    .about{
+        padding: 0;
+    }
+    .about__container__total{
+        
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 62%;
-        margin: auto;
+        max-width: auto;
         margin-top: 30px;
-        align-items: left; /* Esto alinea verticalmente los elementos */
-        justify-content: left; /* Esto centra los elementos horizontalmente */
+        align-items: left; 
+        justify-content: left; 
+        padding: 10px;
+        
+    }
+    .about__container__total .section__content{
+        text-align: left;
+        width: 80%;
+        padding: 20px; 
+    }
+    .about__container__total .section__content{
+        width: 95%; /* O usa max-width para limitar el ancho máximo */
+       ; /* Por ejemplo, para limitar el ancho máximo */
+       
+  
+    }
+    .about__text{
+        width: 100%;
     }
 
-    .about__item {
-        flex-direction: row;
-        width: calc(50% - 10px);
+    .about__container__total .section__content .section__title{
+        text-align: center;
     }
-
-    .about__image {
-        width: 200px;
-        height: 200px;
+    .about__description{
+        
+        width: 100%; 
+        line-height: 1.6;
     }
-
-    .about__title{
-        margin-top: 8%;
-    }
-    /*galery*/
-    .gallery__container{
-        height: 140px;
-    }
-    .footer__legal {
-        font-family: var(--font-body);
-        font-size: 1rem;
-        margin-left: 4.5rem;
-    }
-
 }
 
 
@@ -1186,7 +1251,7 @@ body {
         height: 500px;
     }
     .carousel-text{
-        top: 60%;
+        top: 50%;
     }
     .carousel-indicators{
     top: 90%;
@@ -1209,6 +1274,8 @@ body {
         width: 90%;
     }
 
+    
+
     .content {
         flex-direction: column;
     }
@@ -1218,8 +1285,25 @@ body {
         line-height: 1.2;
         margin-left: -20px;
     }
-
-
+    /*about*/
+    .about{
+        padding: 0;
+    }
+    .about__container__total{
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: auto;
+        margin-top: 30px;
+        align-items: left; 
+        justify-content: left; 
+        padding: 10px;
+        
+    }
+    .about__title{
+        width: 100%;
+    }
  
 
     .content--secondary .content__text {
@@ -1267,17 +1351,15 @@ body {
         max-height: 90%; /* Ajustar la altura para pantallas pequeñas */
     }
 
-    .espacio__blanco{
-        display: none;
-    }
+ 
     /*gallery*/
     .gallery__container{
-        height: 0px;
+            margin-top: 0%;
+    
     }
 
     .gallery{
-        margin-top: -160px;
-        margin-bottom: -40%;
+        margin-top: auto;
     }
     /*formularion*/
 
@@ -1340,8 +1422,12 @@ body {
             .about__text{
                 padding-right: 10px;
             }
+            
             .gallery{
-                margin-top: 30%;
+                margin-top: 25%;
+            }
+            .tittle__gallery{
+                margin-top: auto;
             }
 }
 
@@ -1381,6 +1467,8 @@ body {
     .content--secondary .content__image {
         order: 2;
     }
+
+
 }
 
 
