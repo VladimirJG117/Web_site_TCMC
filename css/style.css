@@ -774,7 +774,8 @@ body {
 
     .container__general__gallery{
         width: 100;
-        padding: 0;
+        padding-right:12%;
+        padding-left: 12%;
         margin: 0;
     }
     .gallery {
@@ -808,21 +809,25 @@ body {
     .gallery-item h3 {
         font-family: var(--font-title);
         font-size: 1.5rem;
-        margin-bottom: 150px;
+        margin-bottom: 20%;
         color: #000000;
         text-align: left;
         padding-left: 20px;
+        display:flex;
+        width: 45%;
+        
 
     }
     
     .gallery-item p {
         font-family: var(--font-body);
         font-size: 1rem;
-        margin-bottom: 100px;
+        margin-bottom: 9%;
         color: #000000;
         padding-left: 20px;
         flex-wrap: wrap;
         display: block;
+        width: 45%;
     }
 
     .gallery-item:nth-child(1) p,
@@ -862,14 +867,10 @@ body {
 
 }
 
-@media (max-width:750px) and (min-width: 577px) {
 
-    .gallery-item p {
-        display: block;
-        width: 40%;
-    }
-    
-}
+
+
+
 
 
 @media (max-width: 575px) {
