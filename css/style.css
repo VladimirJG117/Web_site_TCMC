@@ -708,6 +708,7 @@ body {
         padding-left: 8.5%;
         padding-right: 5%;
         column-gap: 100%;   
+       
     }
 
     /*chat*/
@@ -867,10 +868,12 @@ body {
 
 }
 
+@media (max-width: 767px) and (min-width: 577px) {
+    .gallery{
+        margin-top: 20%;
 
-
-
-
+        }
+}
 
 
 @media (max-width: 575px) {
@@ -985,9 +988,6 @@ body {
     /*chat*/
     .chat-window__gallery {
         display: none;
-    }
-    .gallery{
-        margin-top: 0%;
     }
 
 }
@@ -1360,7 +1360,7 @@ body {
     }
 
     .gallery{
-        margin-top: auto;
+        margin-top: 20%;
     }
     /*formularion*/
 
@@ -1425,11 +1425,19 @@ body {
             }
             
             .gallery{
-                margin-top: 25%;
+                margin-top: 30%;
             }
             .tittle__gallery{
                 margin-top: auto;
             }
+}
+
+@media (max-width:360px){
+    .gallery{
+        margin-top: 40%;
+    }
+  
+
 }
 
 
