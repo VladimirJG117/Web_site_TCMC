@@ -983,7 +983,7 @@ body {
         font-family: var(--font-title);
         font-size: 1.5rem;
         margin-bottom: 0px;
-        width: 15vh;
+        width: 100%;
     }
     /*chat*/
     .chat-window__gallery {
@@ -1252,7 +1252,7 @@ body {
         height: 500px;
     }
     .carousel-text{
-        top: 50%;
+        top: 40%;
     }
     .carousel-indicators{
     top: 90%;
@@ -1436,7 +1436,9 @@ body {
     .gallery{
         margin-top: 40%;
     }
-  
+    .carousel-text{
+        top:30%
+    }
 
 }
 
